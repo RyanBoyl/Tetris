@@ -9,5 +9,5 @@ The game can be started by loading it in CLion. The game can then be played like
 
 SFML Documentation is located [here](https://www.sfml-dev.org/documentation/2.6.1/).
 
-
+Any vulnerabilities can be reported [here](https://github.com/RyanBoyl/Tetris/security/advisories?state=Triage).
 
