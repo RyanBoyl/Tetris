@@ -12,3 +12,4 @@ SFML Documentation is located [here](https://www.sfml-dev.org/documentation/2.6.
 
 Any vulnerabilities can be reported [here](https://github.com/RyanBoyl/Tetris/security/advisories?state=Triage). Please ensure that HTTPS is used to ensure that your report is sent privately.
 
+Contributions should follow [these requirements](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines).
