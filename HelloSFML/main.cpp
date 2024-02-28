@@ -28,7 +28,7 @@ int main() {
    //Credit to Pixesia Studio for the font
    // Inserts specialized font using link
    sf::Font font;
-   if(!font.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/SpeedrushRegular.otf"))
+   if(!font.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/SpeedrushRegular.otf")) //change to your path
    { //https://www.fontspace.com/speed-rush-font-f71421 //links font
        cout << "Error while loading font" << endl;
    } // loads font
@@ -48,7 +48,7 @@ int main() {
 
    // Loads in logo.png from files
    sf::Texture LogoTex;
-   if(!LogoTex.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/logo.png")) {
+   if(!LogoTex.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/logo.png")) { //change to your path
        cout << "Could not load Tetris Logo." << endl;
        return -1;
    } // loads logo.png
@@ -62,7 +62,7 @@ int main() {
 
    // Loads in blueboxBG.jpg from files
    sf::Texture BoxTex;
-   if(!BoxTex.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/blueboxBG.jpg")) {
+   if(!BoxTex.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/blueboxBG.jpg")) { //change to your path
        cout << "Could not load Box Background." << endl;
        return -1;
    }
@@ -78,7 +78,7 @@ int main() {
 
    // Loads in Plane.png
    sf::Texture PlaneTex;
-   if(!PlaneTex.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/Plane.png")) {
+   if(!PlaneTex.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/Plane.png")) { //change to your path
        cout << "Could not load Main Background." << endl;
        return -1;
    }
@@ -96,7 +96,7 @@ int main() {
 
    // Loads border_blocks.png from files
    sf::Texture BorderBlocks;
-   if(!BorderBlocks.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/border_blocks.png")) {
+   if(!BorderBlocks.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/border_blocks.png")) { //change to your path
        cout << "Could not load Box Background." << endl;
        return -1;
    }
@@ -325,70 +325,70 @@ int main() {
    // 2x2 square texture
    sf::Texture squaretexture;
    if (!squaretexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/square.png")) // loads square.png
-       return -1;
+       return -1; //change to your path
    square.setTexture(&squaretexture);
 
 
    // 1x4 rectangle texture
    sf::Texture rectangletexture;
    if (!rectangletexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/rectangle.png"))
-       return -1;
+       return -1; //change to your path
    rectangle.setTexture(&rectangletexture);
 
 
    // L texture
    sf::Texture eltexture;
    if (!eltexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/el.png"))
-       return -1;
+       return -1; //change to your path
    el.setTexture(&eltexture);
 
 
    // backwards L texture
    sf::Texture el_lefttexture;
    if (!el_lefttexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/el_left.png"))
-       return -1;
+       return -1; //change to your path
    el_left.setTexture(&el_lefttexture);
 
 
    // S texture
    sf::Texture estexture;
    if (!estexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/es.png"))
-       return -1;
+       return -1; //change to your path
    es.setTexture(&estexture);
 
 
    // backwards S texture
    sf::Texture es_righttexture;
    if (!es_righttexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML//es_right.png"))
-       return -1;
+       return -1; //change to your path
    es_right.setTexture(&es_righttexture);
 
 
    // T texture
    sf::Texture teetexture;
    if (!teetexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/tee.png"))
-       return -1;
+       return -1; //change to your path
    tee.setTexture(&teetexture);
 
 
    // 1x1 square texture
    sf::Texture singletexture;
    if (!singletexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/single.png"))
-       return -1;
+       return -1; //change to your path
    single.setTexture(&singletexture);
 
 
    // 1x2 rectangle texture
    sf::Texture small_rectangletexture;
    if (!small_rectangletexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/small_rectangle.png"))
-       return -1;
+       return -1; //change to your path
    small_rectangle.setTexture(&small_rectangletexture);
 
 
    // 2x3 rectangle texture
    sf::Texture large_rectangletexture;
    if (!large_rectangletexture.loadFromFile("C:/Users/hoyen/CLionProjects/HelloSFML/large_rectangle.png"))
-       return -1;
+       return -1; //change to your path
    large_rectangle.setTexture(&large_rectangletexture);
 
 
@@ -397,20 +397,20 @@ int main() {
 
 
 
-   srand (time(NULL));
-   int i = rand() % 5;
-   int first = i;
+   srand (time(NULL)); // ignorable warnings
+   int i = rand() % 5; // ignorable warning
+   int first = i; // ignorable warnings
 
    // puts shapes in to an array
    sf::Shape *shape[7]={&rectangle,&square,&single, &small_rectangle, &large_rectangle};
    sf::RectangleShape fallen_rectangle[1000];
-   sf::ConvexShape fallen_convex[1000];
+   sf::ConvexShape fallen_convex[1000]; //ignorable warnings
    sf::Shape *fallen_shape[1000];
 
    int t = 0;
    int scorecount = 0;
-   int posx[1000];
-   int posy[1000];
+   int posx[1000]; // ignorable warnings
+   int posy[1000]; // ignorable warnings
 
 
 
@@ -421,11 +421,11 @@ int main() {
    while (window.isOpen()) {
 
 
-       sf::Event event;
+       sf::Event event; // ignorable warning
        shape[i]->move(0,0.1); // (x,y)
 
        while(window.pollEvent(event)) {
-           switch(event.type){
+           switch(event.type){ // ignorable warning
 
                case sf::Event::Closed:
                    window.close();
@@ -563,7 +563,7 @@ int main() {
 
 
 
-       if((i == 3 && shape[i]->getRotation() == 270) || (i == 2 && shape[i]->getRotation() == 270)) {
+       if((i == 3 && shape[i]->getRotation() == 270) || (i == 2 && shape[i]->getRotation() == 270)) { // ignorable warning
 
            if (shape[i]->getPosition().x + shape[i]->getGlobalBounds().width-40> window_width-border4.getSize().x-520){
                shape[i]->setPosition(window_width-border4.getSize().x -
@@ -642,11 +642,11 @@ int main() {
 
        // setting size and quantity of cells
        for (int c = 1; c < 19; c++) {
-           cell_vertical.setPosition(20 * c, 1);
+           cell_vertical.setPosition(20 * c, 1); // ignorable warning
            window.draw(cell_vertical);
        }
        for (int r = 1; r < 35; r++) {
-           cell_horizontal.setPosition(1, 20 * r);
+           cell_horizontal.setPosition(1, 20 * r); // ignorable warning
            window.draw(cell_horizontal);
        }
 
@@ -682,7 +682,7 @@ int main() {
 
        if (shape[i]->getGlobalBounds().intersects(border2.getGlobalBounds())) { //Collisions with bottom border
 
-           switch (i) {
+           switch (i) { // ignorable warning
                case 0:
                    fallen_rectangle[t] = rectangle;
                    fallen_rectangle[t].setPosition(shape[i]->getPosition().x, shape[i]->getPosition().y);
@@ -718,7 +718,7 @@ int main() {
            // randomly generate and drop shapes
            if (i > 5) {
 
-               i = rand() % 5;
+               i = rand() % 5; // ignorable warning
                shape[i]->setPosition(200, 30);
                window.draw(*shape[i]);
            }
@@ -726,16 +726,16 @@ int main() {
 
                shape[i]->setPosition(200, 30);
                window.draw(*shape[i]);
-               i = rand() % 5;
+               i = rand() % 5; // ignorable warning
            }
 
 
            shape[i]->move(0, 0.1);
-           sf::Event event2;
+           sf::Event event2; // ignorable warning
 
            while (window.pollEvent(event2)) {
 
-               switch (event2.type) {
+               switch (event2.type) { // ignorable warning
                    case sf::Event::Closed:
                        window.close();
                        break;
@@ -794,11 +794,11 @@ int main() {
                // If it is, it deletes all shapes whose centers are on or above the row.
 
                int count = 0;
-               int blocks[1000];
-               int b = 0;
+               int blocks[1000]; // ignorable warning
+               int b = 0; // ignorable warnings
 
                for (int r = 30; r <= 350; r = r + 20) {
-                   row_deletion.setPosition(r, c);
+                   row_deletion.setPosition(r, c); // ignorable warnings
 
                    for (int l = 0; l < t; l++) {
 
@@ -811,7 +811,7 @@ int main() {
 
                    for(int h = 0; h < t; h++) {
 
-                       if(fallen_shape[h]->getPosition().y <= (c + 30))
+                       if(fallen_shape[h]->getPosition().y <= (c + 30)) // ignorable warning
                            fallen_shape[h]->setPosition(fallen_shape[h]->getPosition().x,
                                                         fallen_shape[h]->getPosition().y + 800);
                    }
@@ -831,8 +831,8 @@ int main() {
        for(int k = 0; k < t; k++) { //Collisions with other blocks
            if (shape[i]->getGlobalBounds().intersects(fallen_shape[k]->getGlobalBounds())) {
 
-               int posx = (int)shape[i]->getPosition().x;
-               int posy = (int)shape[i]->getPosition().y;
+               int posx = (int)shape[i]->getPosition().x; // ignorable warnings
+               int posy = (int)shape[i]->getPosition().y; // ignorable warnings
 
                // prints the origin location and the falling location
                cout << "Shape x: " << shape[i]->getPosition().x << endl;
@@ -842,7 +842,7 @@ int main() {
                cout << shape[i]->getRotation();
 
                // tracks the position of the falling shape
-               switch (i) {
+               switch (i) { // ignorable warning
 
                    case 0:
                        fallen_rectangle[t] = rectangle;
@@ -878,24 +878,24 @@ int main() {
                    window.close();
                if (i > 5) {
 
-                   i = rand() % 5;
+                   i = rand() % 5; // ignorable warning
                    shape[i]->setPosition(200, 30);
                    window.draw(*shape[i]);
                } else {
 
                    shape[i]->setPosition(200, 30);
                    window.draw(*shape[i]);
-                   i = rand() % 5;
+                   i = rand() % 5; // ignorable warning
                }
 
 
                //------------------------------------------------------- Key Movements
 
                shape[i]->move(0, 0.1);
-               sf::Event event2;
+               sf::Event event2; // ignorable warning
 
                while (window.pollEvent(event2)) {
-                   switch (event2.type) {
+                   switch (event2.type) { // ignorable warning
 
                        case sf::Event::Closed:
                            window.close();
